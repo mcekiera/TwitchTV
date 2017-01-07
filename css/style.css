@@ -1,0 +1,51 @@
+html {
+  background-color: #7FDBFF;
+  padding: 50px;
+  font-family: 'Open Sans', sans-serif; }
+
+body {
+  border-radius: 30px; }
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 78px;
+  position: relative;
+  color: #001f3f; }
+
+.streamers_list {
+  list-style-type: none; }
+
+.streamer .panel {
+  border-radius: 20px; }
+.streamer__logo {
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  float: left; }
+.streamer__name {
+  font-size: 36px;
+  line-height: 50px;
+  width: 300px;
+  padding: 0 10px; }
+  .streamer__name:hover, .streamer__name:active {
+    text-decoration: none; }
+.streamer__status {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 14px; }
+.streamer__name {
+  display: inline-block;
+  background-color: #ddd;
+  color: #333; }
+.streamer__filter {
+  position: absolute;
+  top: 20px;
+  right: 50px; }
+
+.top {
+  position: relative; }
+
+/*# sourceMappingURL=style.css.map */

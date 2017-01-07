@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TwitchTV">
+<head>
+    <meta charset="UTF-8">
+    <title>TwitchTV</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body ng-controller="TwitchController" class="container" ng-cloak>
+    <div class="container top">
+        <div class="header">TwitchTV</div>
+        <form class="form-group streamer__filter">
+            <label>Streamers:</label>
+            <select class="streamer__type form-control" ng-model="type">
+                <option value="All">All</option>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+            </select>
+        </form>
+    </div>
+    <ul class="streamers_list">
+        <li class="streamer" ng-repeat="streamer in streamers | streamType:type">
+            <div class="panel panel-default">
+                <img class="streamer__logo" src={{streamer.logo}}>
+                <a class="streamer__name" ng-href={{streamer.url}}>{{streamer.display_name}}</a>
+                <span class="streamer__status ">{{getStatus(streamer.display_name)}}</span>
+            </div>
+        </li>
+    </ul>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="js/twitchTV.js" type="text/javascript"></script>
+</body>
+</html>
